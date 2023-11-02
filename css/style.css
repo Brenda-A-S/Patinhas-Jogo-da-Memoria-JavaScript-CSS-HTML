@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: .2s;
+    border: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #CFCFCF;
+    background: #000 url(../imgs/bg.png);
+    user-select: none;
+}
+
+a {
+    color: inherit;
+    display: block;
+}
+
+h1,
+button {
+    font-family: 'Aladin', cursive;
+    color: #FF7500;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+button {
+    font-size: 1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: .25rem;
+}
+
+.reset {
+    cursor: pointer;
+    display: flex;
+    padding: 0.25rem;
+    border-radius: 5px;
+    background-color: #000;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.card {
+    padding: 1rem;
+    border-radius: 10px;
+    transform: rotateY(180deg);
+    transition: 0.25s;
+    position: relative;
+    cursor: pointer;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    background: #CEE0C2;
+    backface-visibility: hidden;
+    border: 2px solid #CEE0C2;
+    border-radius: 10px;
+    inset: 0;
+    transform: rotateY(0deg);
+    transition: 0.25s;
+}
+
+.card.boxOpen {
+    transform: rotateY(0deg);
+}
+
+.boxOpen::after,
+.boxMatch::after {
+    transform: rotateY(180deg);
+}
+
+.card img {
+    margin: auto;
+}
+
+.credits {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: .25rem;
+    gap: 1rem;
+    justify-content: center;
+    z-index: -1;
+}
+
+.credit {
+    font-size: .85rem;
+}
+
+@media (max-width:600px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .game {
+        gap: .6rem;
+        padding: 0.25rem;
+    }
+    .credits {
+        bottom: .15rem;
+        gap: .8rem;
+    }
+    
+    .credit {
+        font-size: .65rem;
+    }
+    .content {
+        display: flex;
+        gap: 2rem;
+    }
+}
