@@ -77,42 +77,42 @@ class MemoryGame {
 
 const cardImgs = [
     {
-        src: '../imgs/1.svg',
+        src: './imgs/1.svg',
         nome: 'Gato 1',
         bgColor: '#692C2B'
     },
     {
-        src: '../imgs/2.svg',
+        src: './imgs/2.svg',
         nome: 'Gato 2',
         bgColor: '#479898'
     },
     {
-        src: '../imgs/3.svg',
+        src: './imgs/3.svg',
         nome: 'Gato 3',
         bgColor: '#B0A2AC'
     },
     {
-        src: '../imgs/4.svg',
+        src: './imgs/4.svg',
         nome: 'Gato 4',
         bgColor: '#C2907C'
     },
     {
-        src: '../imgs/5.svg',
+        src: './imgs/5.svg',
         nome: 'Gato 5',
         bgColor: '#FFE486'
     },
     {
-        src: '../imgs/6.svg',
+        src: './imgs/6.svg',
         nome: 'Gato 6',
         bgColor: '#D2E2ED'
     },
     {
-        src: '../imgs/7.svg',
+        src: './imgs/7.svg',
         nome: 'Gato 7',
         bgColor: '#CEE0C2'
     },
     {
-        src: '../imgs/8.svg',
+        src: './imgs/8.svg',
         nome: 'Gato 8',
         bgColor: '#FF816F'
     },
