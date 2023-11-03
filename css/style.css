@@ -38,8 +38,22 @@ button {
 
 img {
     max-width: 100%;
-    height: auto;
     display: block;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem .25rem;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .content {
@@ -58,27 +72,21 @@ img {
     background-color: #000;
 }
 
-.container {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
 .game {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     gap: 1rem;
 }
 
 .card {
-    padding: 1rem;
+    padding: 1rem .25rem;
     border-radius: 10px;
     transform: rotateY(180deg);
     transition: 0.25s;
     position: relative;
     cursor: pointer;
+
 }
 
 .card::after {
@@ -93,6 +101,12 @@ img {
     transition: 0.25s;
 }
 
+.card img {
+    margin: auto;
+    width: auto;
+    height: 100%;
+}
+
 .card.boxOpen {
     transform: rotateY(0deg);
 }
@@ -102,19 +116,10 @@ img {
     transform: rotateY(180deg);
 }
 
-.card img {
-    margin: auto;
-}
-
 .credits {
     width: 100%;
-    display: flex;
-    position: absolute;
-    bottom: .1rem;
-    gap: 1rem;
-    justify-content: center;
-    z-index: -1;
     padding: 0.5rem;
+    text-align: center;
 }
 
 .credit {

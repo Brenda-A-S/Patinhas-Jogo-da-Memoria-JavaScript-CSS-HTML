@@ -19,6 +19,8 @@ class MemoryGame {
             card.addEventListener('click', () => { this.handleClick(card) })
             cardImg.src = element.src;
             cardImg.alt = element.nome;
+            cardImg.width = '80';
+            cardImg.height = '80';
             gameContainer.appendChild(card);
         })
     }
