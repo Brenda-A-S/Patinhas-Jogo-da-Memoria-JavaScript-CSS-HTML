@@ -1,10 +1,12 @@
 class MemoryGame {
-    constructor(cardImgs, gameContainer) {
+    constructor(cardImgs, gameContainer, btnReset) {
         this.cardImgs = cardImgs;
         this.gameContainer = gameContainer;
+        this.btnReset = btnReset;
         this.openCards = [];
         this.handleClick = this.handleClick.bind(this);
         this.checkMatch = this.checkMatch.bind(this);
+        this.init = this.init.bind(this);
         this.isProcessing = false;
     }
 
@@ -74,6 +76,10 @@ class MemoryGame {
         this.gameContainer.innerHTML = '';
         this.openCards = [];
         this.createCards(this.sortArray(this.cardImgs), this.gameContainer);
+    }
+
+    init(){
+        this.btnReset.addEventListener('click',() => this.reset())
     }
 }
 
@@ -161,11 +167,9 @@ const cardImgs = [
 ]
 
 const gameContainer = document.querySelector('.game');
-
-const game = new MemoryGame(cardImgs, gameContainer);
-
 const btnReset = document.querySelector('.reset');
 
-game.createCards(game.sortArray(cardImgs), gameContainer);
+const game = new MemoryGame(cardImgs, gameContainer, btnReset);
 
-btnReset.addEventListener('click',() => game.reset());
+game.createCards(game.sortArray(cardImgs), gameContainer);
+game.init();
