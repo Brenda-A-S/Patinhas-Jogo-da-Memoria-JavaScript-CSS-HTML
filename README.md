@@ -30,6 +30,11 @@ Olá! Esse é o repositório do meu jogo da memória de gatinhos:smile_cat:. Ele
 
 https://github.com/Brenda-A-S/Pokedex-HTML-CSS-JS/assets/69852246/09a7d42b-4312-4ba3-9848-daf7773d9ec0
 
+# Assets
+
+- As imagens utilizadas são disponibilizadas pelo Freepik, por diversos criadores. Confira no [link](https://br.freepik.com/vetores-gratis/patas-de-gato-colocadas-em-estilo-plano_13153666.htm#query=gatinho&position=10&from_view=search&track=sph).
+- Os sons utilizados são disponibilizados pelo Pixabay. Confira no [link](https://pixabay.com/pt/).
+
 ## Conecte-se comigo :link:
 
 * Me siga no [Instagram](https://www.instagram.com/brenda_a_s_dev/)
