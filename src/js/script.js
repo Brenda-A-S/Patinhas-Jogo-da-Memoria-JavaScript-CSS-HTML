@@ -4,10 +4,17 @@ class MemoryGame {
         this.gameContainer = gameContainer;
         this.btnReset = btnReset;
         this.openCards = [];
+        this.playSound = this.playSound.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.checkMatch = this.checkMatch.bind(this);
         this.init = this.init.bind(this);
         this.isProcessing = false;
+    }
+
+    playSound(audioName) {
+        let audio = new Audio(`src/assets/sounds/${audioName}.mp3`);
+        audio.volume = 0.2;
+        audio.play();
     }
 
     createCards(cardImgs, gameContainer) {
@@ -31,6 +38,8 @@ class MemoryGame {
         if (this.isProcessing) {
             return;
         } else {
+            this.playSound('flip')
+
             if (this.openCards.length < 2 && !element.classList.contains('boxMatch') && !this.openCards.includes(element)) {
                 element.classList.add('boxOpen');
                 this.openCards.push(element);
@@ -47,6 +56,8 @@ class MemoryGame {
     checkMatch() {
         if (this.openCards.length === 2) {
             if (this.openCards[0].innerHTML === this.openCards[1].innerHTML) {
+            this.playSound('win');
+
                 this.openCards[0].classList.add("boxMatch");
                 this.openCards[1].classList.add("boxMatch");
                 console.log('Correspondência encontrada');
@@ -78,89 +89,89 @@ class MemoryGame {
         this.createCards(this.sortArray(this.cardImgs), this.gameContainer);
     }
 
-    init(){
-        this.btnReset.addEventListener('click',() => this.reset())
+    init() {
+        this.btnReset.addEventListener('click', () => this.reset())
     }
 }
 
 const cardImgs = [
     {
-        src: './imgs/1.svg',
+        src: './src/assets/imgs/1.svg',
         nome: 'Gato 1',
         bgColor: '#692C2B'
     },
     {
-        src: './imgs/2.svg',
+        src: './src/assets/imgs/2.svg',
         nome: 'Gato 2',
         bgColor: '#479898'
     },
     {
-        src: './imgs/3.svg',
+        src: './src/assets/imgs/3.svg',
         nome: 'Gato 3',
         bgColor: '#B0A2AC'
     },
     {
-        src: './imgs/4.svg',
+        src: './src/assets/imgs/4.svg',
         nome: 'Gato 4',
         bgColor: '#C2907C'
     },
     {
-        src: './imgs/5.svg',
+        src: './src/assets/imgs/5.svg',
         nome: 'Gato 5',
         bgColor: '#FFE486'
     },
     {
-        src: './imgs/6.svg',
+        src: './src/assets/imgs/6.svg',
         nome: 'Gato 6',
         bgColor: '#D2E2ED'
     },
     {
-        src: './imgs/7.svg',
+        src: './src/assets/imgs/7.svg',
         nome: 'Gato 7',
         bgColor: '#CEE0C2'
     },
     {
-        src: './imgs/8.svg',
+        src: './src/assets/imgs/8.svg',
         nome: 'Gato 8',
         bgColor: '#FF816F'
     },
     {
-        src: './imgs/1.svg',
+        src: './src/assets/imgs/1.svg',
         nome: 'Gato 1',
         bgColor: '#692C2B'
     },
     {
-        src: './imgs/2.svg',
+        src: './src/assets/imgs/2.svg',
         nome: 'Gato 2',
         bgColor: '#479898'
     },
     {
-        src: './imgs/3.svg',
+        src: './src/assets/imgs/3.svg',
         nome: 'Gato 3',
         bgColor: '#B0A2AC'
     },
     {
-        src: './imgs/4.svg',
+        src: './src/assets/imgs/4.svg',
         nome: 'Gato 4',
         bgColor: '#C2907C'
     },
     {
-        src: './imgs/5.svg',
+        src: './src/assets/imgs/5.svg',
         nome: 'Gato 5',
         bgColor: '#FFE486'
     },
     {
-        src: './imgs/6.svg',
+        src: './src/assets/imgs/6.svg',
         nome: 'Gato 6',
         bgColor: '#D2E2ED'
     },
     {
-        src: './imgs/7.svg',
+        src: './src/assets/imgs/7.svg',
         nome: 'Gato 7',
         bgColor: '#CEE0C2'
     },
     {
-        src: './imgs/8.svg',
+        src: './src/assets/imgs/8.svg',
         nome: 'Gato 8',
         bgColor: '#FF816F'
     }

@@ -1,66 +1,66 @@
 const cardImgs = [
     {
-        src: '../imgs/bluePotion.svg',
+        src: '../assets/imgs/bluePotion.svg',
         nome: 'Poção azul'
     },
     {
-        src: '../imgs/cristal.svg',
+        src: '../assets/imgs/cristal.svg',
         nome: 'Cristal'
     },
     {
-        src: '../imgs/grayGrimoire.svg',
+        src: '../assets/imgs/grayGrimoire.svg',
         nome: 'Grimório cinza'
     },
     {
-        src: '../imgs/normalGrimoire.svg',
+        src: '../assets/imgs/normalGrimoire.svg',
         nome: 'Grimório normal'
     },
     {
-        src: '../imgs/pinkPotion.svg',
+        src: '../assets/imgs/pinkPotion.svg',
         nome: 'Poção Rosa'
     },
     {
-        src: '../imgs/purpleRoundedPotion.svg',
+        src: '../assets/imgs/purpleRoundedPotion.svg',
         nome: 'Poção Roxa'
     },
     {
-        src: '../imgs/redPotion.svg',
+        src: '../assets/imgs/redPotion.svg',
         nome: 'Poção Vermelha'
     },
     {
-        src: '../imgs/greenPotion.svg',
+        src: '../assets/imgs/greenPotion.svg',
         nome: 'Poção Verde'
     },
     {
-        src: '../imgs/bluePotion.svg',
+        src: '../assets/imgs/bluePotion.svg',
         nome: 'Poção azul'
     },
     {
-        src: '../imgs/cristal.svg',
+        src: '../assets/imgs/cristal.svg',
         nome: 'Cristal'
     },
     {
-        src: '../imgs/grayGrimoire.svg',
+        src: '../assets/imgs/grayGrimoire.svg',
         nome: 'Grimório cinza'
     },
     {
-        src: '../imgs/normalGrimoire.svg',
+        src: '../assets/imgs/normalGrimoire.svg',
         nome: 'Grimório normal'
     },
     {
-        src: '../imgs/pinkPotion.svg',
+        src: '../assets/imgs/pinkPotion.svg',
         nome: 'Poção Rosa'
     },
     {
-        src: '../imgs/purpleRoundedPotion.svg',
+        src: '../assets/imgs/purpleRoundedPotion.svg',
         nome: 'Poção Roxa'
     },
     {
-        src: '../imgs/redPotion.svg',
+        src: '../assets/imgs/redPotion.svg',
         nome: 'Poção Vermelha'
     },
     {
-        src: '../imgs/greenPotion.svg',
+        src: '../assets/imgs/greenPotion.svg',
         nome: 'Poção Verde'
     }
 ]
