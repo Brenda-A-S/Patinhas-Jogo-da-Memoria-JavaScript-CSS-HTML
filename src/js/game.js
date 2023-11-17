@@ -85,14 +85,16 @@ export default class MemoryGame {
         return arr;
     }
 
-    setResultContent(title, text, btn){
+    setResultContent(title, text, btn) {
         this.title = title;
         this.text = text;
         this.btn = btn;
     }
 
     openResult() {
-        this.modal.newHTMLModal(this.title, this.text, this.btn);
+        if (this.title && this.text && this.btn) {
+            this.modal.newHTMLModal(this.title, this.text, this.btn);
+        }
         this.modal.toggleModal();
     }
 
