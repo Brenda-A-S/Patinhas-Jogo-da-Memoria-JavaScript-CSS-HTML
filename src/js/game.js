@@ -10,7 +10,6 @@ export default class MemoryGame {
         this.checkMatch = this.checkMatch.bind(this);
         this.modal = modal;
 
-        this.init = this.init.bind(this);
         this.isProcessing = false;
     }
 
@@ -86,8 +85,14 @@ export default class MemoryGame {
         return arr;
     }
 
+    setContent(title, text, btn){
+        this.title = title;
+        this.text = text;
+        this.btn = btn;
+    }
+
     openResult() {
-        this.modal.newHTMLModal("Você venceu!", 'Clique no botão abaixo para jogar de novo.', 'Jogar novamente!');
+        this.modal.newHTMLModal(this.title, this.text, this.btn);
         this.modal.toggleModal();
     }
 

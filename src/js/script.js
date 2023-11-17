@@ -89,3 +89,4 @@ modal.init();
 
 const game = new MemoryGame(cardImgs, '.game', '.reset', modal);
 game.init();
+game.setContent("Você venceu!", 'Clique no botão abaixo para jogar de novo.', 'Jogar novamente!');
