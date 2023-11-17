@@ -8,6 +8,14 @@ export default class MemoryGame {
         this.playSound = this.playSound.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.checkMatch = this.checkMatch.bind(this);
+
+        if (this.title === undefined) this.title = 'Você venceu!';
+        else this.title = title;
+        if (this.text === undefined) this.text = 'Jogar novamente?';
+        else this.text = text;
+        if (this.btn === undefined) this.btn = 'Jogar novamente!';
+        else this.btn = btn;
+
         this.modal = modal;
 
         this.isProcessing = false;
@@ -92,9 +100,7 @@ export default class MemoryGame {
     }
 
     openResult() {
-        if (this.title && this.text && this.btn) {
-            this.modal.newHTMLModal(this.title, this.text, this.btn);
-        }
+        this.modal.newHTMLModal(this.title, this.text, this.btn);
         this.modal.toggleModal();
     }
 
