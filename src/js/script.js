@@ -1,4 +1,5 @@
 import MemoryGame from './game.js';
+import Modal from './modal.js';
 
 const cardImgs = [
     {
@@ -85,3 +86,6 @@ const cardImgs = [
 
 const game = new MemoryGame(cardImgs, '.game', '.reset');
 game.init();
+
+const modal = new Modal('#open', '#close', '#modalPlay', '.container-modal', '#title', '#text');
+modal.initModal();
