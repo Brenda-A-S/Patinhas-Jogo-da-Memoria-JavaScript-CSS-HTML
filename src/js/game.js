@@ -85,7 +85,7 @@ export default class MemoryGame {
         return arr;
     }
 
-    setContent(title, text, btn){
+    setResultContent(title, text, btn){
         this.title = title;
         this.text = text;
         this.btn = btn;
