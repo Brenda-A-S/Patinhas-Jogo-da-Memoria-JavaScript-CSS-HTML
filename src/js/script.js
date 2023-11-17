@@ -84,8 +84,8 @@ const cardImgs = [
     }
 ]
 
-const game = new MemoryGame(cardImgs, '.game', '.reset');
-game.init();
-
 const modal = new Modal('#open', '#close', '#modalPlay', '.container-modal', '#title', '#text');
-modal.initModal();
+modal.init();
+
+const game = new MemoryGame(cardImgs, '.game', '.reset', modal);
+game.init();

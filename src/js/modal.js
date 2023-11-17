@@ -1,6 +1,6 @@
 export default class Modal {
     constructor(btnOpen, btnClose, btnPlay, container, title, text) {
-        
+
         this.btnOpen = document.querySelector(btnOpen);
         this.btnClose = document.querySelector(btnClose);
         this.btnPlay = document.querySelector(btnPlay);
@@ -9,25 +9,19 @@ export default class Modal {
         this.text = document.querySelector(text);
 
         this.toggleModal = this.toggleModal.bind(this);
-        this.outsideClickModal = this.outsideClickModal.bind(this);
         this.newHTMLModal = this.newHTMLModal.bind(this);
-        this.initModal = this.initModal.bind(this);
+        this.init = this.init.bind(this);
     }
     toggleModal(event) {
         event.preventDefault();
         this.container.classList.toggle('active');
-    }
-    outsideClickModal(event) {
-        if (event.target === this) {
-            toggleModal(event);
-        }
     }
     newHTMLModal(newTitle, newText, newBtn){
         this.title.textContent = newTitle;
         this.text.textContent = newText;
         this.btnPlay.textContent = newBtn;
     }
-    initModal() {
+    init() {
         if (this.btnOpen) {
             this.btnOpen.addEventListener('click', this.toggleModal);
         }

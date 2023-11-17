@@ -1,5 +1,5 @@
 export default class MemoryGame {
-    constructor(cardImgs, gameContainer, btnReset) {
+    constructor(cardImgs, gameContainer, btnReset, modal) {
         this.cardImgs = cardImgs;
         this.gameContainer = document.querySelector(gameContainer);
         this.btnReset = btnReset = document.querySelector(btnReset);
@@ -8,6 +8,7 @@ export default class MemoryGame {
         this.playSound = this.playSound.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.checkMatch = this.checkMatch.bind(this);
+        this.modal = modal;
 
         this.init = this.init.bind(this);
         this.isProcessing = false;
@@ -73,7 +74,7 @@ export default class MemoryGame {
         this.openCards = [];
 
         if (document.querySelectorAll(".boxMatch").length === this.cardImgs.length) {
-            alert("Você venceu !");
+            this.openResult();
             this.reset();
         }
 
@@ -83,6 +84,11 @@ export default class MemoryGame {
     static sortArray(arr) {
         arr.sort(() => (Math.random() > 0.5) ? 2 : -1);
         return arr;
+    }
+
+    openResult() {
+        this.modal.newHTMLModal("Você venceu!");
+        this.modal.container.classList.add('active');
     }
 
     reset() {
