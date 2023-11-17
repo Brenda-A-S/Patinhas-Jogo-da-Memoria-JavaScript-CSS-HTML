@@ -87,8 +87,8 @@ export default class MemoryGame {
     }
 
     openResult() {
-        this.modal.newHTMLModal("Você venceu!");
-        this.modal.container.classList.add('active');
+        this.modal.newHTMLModal("Você venceu!", 'Clique no botão abaixo para jogar de novo.', 'Jogar novamente!');
+        this.modal.toggleModal();
     }
 
     reset() {
