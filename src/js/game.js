@@ -1,4 +1,4 @@
-class MemoryGame {
+export default class MemoryGame {
     constructor(cardImgs, gameContainer, btnReset) {
         this.cardImgs = cardImgs;
         this.gameContainer = gameContainer;
