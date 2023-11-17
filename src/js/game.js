@@ -1,8 +1,8 @@
 export default class MemoryGame {
     constructor(cardImgs, gameContainer, btnReset) {
         this.cardImgs = cardImgs;
-        this.gameContainer = gameContainer;
-        this.btnReset = btnReset;
+        this.gameContainer = document.querySelector(gameContainer);
+        this.btnReset = btnReset = document.querySelector(btnReset);
         this.openCards = [];
 
         this.playSound = this.playSound.bind(this);
@@ -60,7 +60,7 @@ export default class MemoryGame {
     checkMatch() {
         if (this.openCards.length === 2) {
             if (this.openCards[0].innerHTML === this.openCards[1].innerHTML) {
-            this.playSound('win');
+                this.playSound('win');
 
                 this.openCards[0].classList.add("boxMatch");
                 this.openCards[1].classList.add("boxMatch");

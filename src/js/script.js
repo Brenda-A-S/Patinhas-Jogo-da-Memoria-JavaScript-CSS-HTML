@@ -83,10 +83,5 @@ const cardImgs = [
     }
 ]
 
-const gameContainer = document.querySelector('.game');
-const btnReset = document.querySelector('.reset');
-
-const game = new MemoryGame(cardImgs, gameContainer, btnReset);
-
-// game.createCards(game.sortArray(cardImgs), gameContainer);
+const game = new MemoryGame(cardImgs, '.game', '.reset');
 game.init();
