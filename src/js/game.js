@@ -70,7 +70,7 @@ export default class MemoryGame {
 
         this.openCards = [];
 
-        if (document.querySelectorAll(".boxMatch").length === cardImgs.length) {
+        if (document.querySelectorAll(".boxMatch").length === this.cardImgs.length) {
             alert("Você venceu !");
             this.reset();
         }
