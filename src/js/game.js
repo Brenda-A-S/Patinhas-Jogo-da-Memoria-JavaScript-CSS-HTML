@@ -4,9 +4,11 @@ export default class MemoryGame {
         this.gameContainer = gameContainer;
         this.btnReset = btnReset;
         this.openCards = [];
+
         this.playSound = this.playSound.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.checkMatch = this.checkMatch.bind(this);
+
         this.init = this.init.bind(this);
         this.isProcessing = false;
     }
@@ -34,6 +36,10 @@ export default class MemoryGame {
         })
     }
 
+    addCards() {
+        this.createCards(this.constructor.sortArray(this.cardImgs), this.gameContainer);
+    }
+
     handleClick(element) {
         if (this.isProcessing) {
             return;
@@ -43,11 +49,9 @@ export default class MemoryGame {
             if (this.openCards.length < 2 && !element.classList.contains('boxMatch') && !this.openCards.includes(element)) {
                 element.classList.add('boxOpen');
                 this.openCards.push(element);
-                console.log('Carta aberta:', element);
             }
             if (this.openCards.length === 2) {
                 this.isProcessing = true;
-                console.log('Iniciando comparação...');
                 setTimeout(this.checkMatch, 500);
             }
         }
@@ -60,11 +64,9 @@ export default class MemoryGame {
 
                 this.openCards[0].classList.add("boxMatch");
                 this.openCards[1].classList.add("boxMatch");
-                console.log('Correspondência encontrada');
             } else {
                 this.openCards[0].classList.remove("boxOpen");
                 this.openCards[1].classList.remove("boxOpen");
-                console.log('Nenhuma correspondência encontrada');
             }
         }
 
@@ -78,7 +80,7 @@ export default class MemoryGame {
         this.isProcessing = false;
     }
 
-    sortArray(arr) {
+    static sortArray(arr) {
         arr.sort(() => (Math.random() > 0.5) ? 2 : -1);
         return arr;
     }
@@ -86,10 +88,11 @@ export default class MemoryGame {
     reset() {
         this.gameContainer.innerHTML = '';
         this.openCards = [];
-        this.createCards(this.sortArray(this.cardImgs), this.gameContainer);
+        this.createCards(this.constructor.sortArray(this.cardImgs), this.gameContainer);
     }
 
     init() {
-        this.btnReset.addEventListener('click', () => this.reset())
+        this.btnReset.addEventListener('click', () => this.reset());
+        this.addCards();
     }
 }
