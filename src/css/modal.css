@@ -17,7 +17,8 @@
 .modal {
     background-color: #CEE0C2;
     padding: 1.75rem;
-    max-width: 28rem;
+    width: 80vw;
+    max-width: 400px;
     position: relative;
     border-radius: 4px;
     color: #000;
