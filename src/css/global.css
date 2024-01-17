@@ -42,6 +42,10 @@ img {
     display: block;
 }
 
+footer a:hover {
+    text-decoration: underline;
+}
+
 .container {
     height: 100vh;
     display: flex;
