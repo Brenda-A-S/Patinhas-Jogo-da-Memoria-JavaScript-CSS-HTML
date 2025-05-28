@@ -1,6 +1,30 @@
 # Patinhas | Jogo da memória :feet::cat:
 
-Olá! Esse é o repositório do meu jogo da memória de gatinhos:smile_cat:. Ele foi desenvolvido com JavaScript, CSS e HTML, iniciei ele em um bootcamp com um código simples no arquivo "script copy.js", que depois transformei em uma classe que pode ser reutilizada com temáticas diferentes, sendo instanciada com container e coleção de imagens diferentes, no mesmo ou em outro projeto.
+Esse é um projetinho que desenvolvi para praticar JavaScript puro, junto com HTML e CSS. Comecei ele durante um bootcamp, com um código mais simples (que está no arquivo script copy.js) e depois evoluí a lógica para algo mais estruturado, transformando em uma classe reutilizável.
+
+Com essa classe, dá pra criar facilmente outros jogos da memória, trocando só o container e as imagens — ou seja, é possível reaproveitar em diferentes temáticas e até em outros projetos.
+
+O jogo tem:
+
+* Embaralhamento automático das cartas
+
+* Feedback visual para acertos e erros
+
+* Interface simples, fofa e responsiva 🐾
+
+Fiz esse projeto para treinar:
+
+* Manipulação do DOM
+
+* Condições e lógica de jogo
+
+* Organização de código com orientação a objetos
+
+* Layouts responsivos sem frameworks
+
+Foi super divertido de fazer e espero que quem jogar também aproveite! 😄
+
+
 
 # Como jogar :pushpin:
 
